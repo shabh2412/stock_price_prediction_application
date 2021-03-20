@@ -240,7 +240,6 @@ app.layout = html.Div([
                     id='stock_name',
                     type='text',
                     debounce= True,
-                    value="RELIANCE.NS",
                     placeholder="Type a stock name & hit enter",
                     style={
                         "display": "block", "margin-left": "auto", "margin-right": "auto", "width": "60%"
