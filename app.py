@@ -299,7 +299,7 @@ def update_graph(value):
     try:
         close_train, close_test, date_train, date_test = split_data(close_data, df)
         train_generator, test_generator = sequence_to_supervised(15,close_train,close_test)
-        lstm_model = train_model(15,train_generator, 25)
+        lstm_model = train_model(15,train_generator, 5)
         # lstm_model.save('lstm_model.h5')
         figure_1, r2_score = plot_train_test_graph(stock, lstm_model, test_generator, close_train, close_test, date_train, date_test)
         close_data, forecast, forecast_dates = predicting(close_data, lstm_model, 15, df)
