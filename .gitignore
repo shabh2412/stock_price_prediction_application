@@ -1,0 +1,7 @@
+venv
+*.pyc
+.DS_Store
+env
+.vscode
+.ipynb_checkpoints
+environment.yml
