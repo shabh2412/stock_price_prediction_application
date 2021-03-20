@@ -210,6 +210,7 @@ server = app.server
 
 app.layout = html.Div([
     html.H1('Stock Prediction using Machine Learning', style={"textAlign": "center", "margin_top":"8px"}),
+    html.H2('Created By - Rishabh Panesar', style={"textAlign": "center", "margin_top":"8px"}),
     dcc.Tabs(id="tabs", children=[
         dcc.Tab(label="Some Basic Information", children=[
             html.Div([
@@ -232,13 +233,14 @@ app.layout = html.Div([
                 )
             ], style={"height":"100vh", "padding":"20px"})
         ], style=tab_style, selected_style=tab_selected_style),
-        dcc.Tab(label="Created By - Rishabh Panesar", children=[
+        dcc.Tab(label="See the model in Action", children=[
             html.Div([
                 html.H1('Type a Stock Name & hit enter', style={'textAlign':'center'}),
                 dcc.Input(
                     id='stock_name',
                     type='text',
                     debounce= True,
+                    value="RELIANCE.NS",
                     placeholder="Type a stock name & hit enter",
                     style={
                         "display": "block", "margin-left": "auto", "margin-right": "auto", "width": "60%"
