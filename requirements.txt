@@ -52,7 +52,7 @@ six
 sklea
 tensorboard
 tensorboard-plugin-wit
-tensorflow
+tensorflow-cpu
 tensorflow-estimator
 termcolor
 threadpoolctl
