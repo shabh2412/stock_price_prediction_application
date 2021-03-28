@@ -6,7 +6,6 @@ How to use?
 2. Open terminal or CMD and cd into the cloned folder. Or, you can simply open the folder in CMD
 3. Create a virtual environment : ```python3.8 -m venv v_env```
 4. Activate the virtual environment :
-    For Windows ```source v_env\bin\activate```
     For MacOs ```source v_env/bin/activate```
 5. run ```pip install -r requirements.txt```
 6. run ```python3.8 app.py```
