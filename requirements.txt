@@ -1,50 +1,146 @@
-absl-py==0.12.0
+absl-py==0.11.0
+appdirs==1.4.4
+appnope @ file:///opt/concourse/worker/volumes/live/5f13e5b3-5355-4541-5fc3-f08850c73cf9/volume/appnope_1606859448618/work
+argon2-cffi @ file:///opt/concourse/worker/volumes/live/d733ceb5-7f19-407b-7da7-a386540ab855/volume/argon2-cffi_1613037492998/work
 astunparse==1.6.3
+async-generator @ file:///home/ktietz/src/ci/async_generator_1611927993394/work
+attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+beautifulsoup4==4.9.3
+bleach @ file:///tmp/build/80754af9/bleach_1612211392645/work
 Brotli==1.0.9
+bs4==0.0.1
 cachetools==4.2.1
-certifi==2020.12.5
+certifi==2020.6.20
+cffi @ file:///opt/concourse/worker/volumes/live/730e9a28-66f9-4e03-51ad-252ec8e40d81/volume/cffi_1606255126408/work
 chardet==4.0.0
 click==7.1.2
+cmdstanpy==0.9.5
+convertdate==2.3.1
+cycler==0.10.0
+Cython==0.29.22
 dash==1.19.0
+dash-bootstrap-components==0.11.3
 dash-core-components==1.15.0
 dash-html-components==1.1.2
 dash-renderer==1.9.0
 dash-table==4.11.2
+decorator @ file:///home/ktietz/src/ci/decorator_1611930055503/work
+defusedxml @ file:///home/ktietz/src/ci_mi/defusedxml_1612808095953/work
+distlib==0.3.1
+entrypoints==0.3
+ephem==3.7.7.1
+fbprophet==0.7.1
+filelock==3.0.12
 Flask==1.1.2
 Flask-Compress==1.9.0
 flatbuffers==1.12
 future==0.18.2
 gast==0.3.3
-google-auth==1.28.0
+google-auth==1.27.1
 google-auth-oauthlib==0.4.3
 google-pasta==0.2.0
 grpcio==1.32.0
-gunicorn==20.0.4
 h5py==2.10.0
+hijri-converter==2.1.1
+holidays==0.10.5.2
 idna==2.10
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
+ipykernel @ file:///opt/concourse/worker/volumes/live/88f541d3-5a27-498f-7391-f2e50ca36560/volume/ipykernel_1596206680118/work/dist/ipykernel-5.3.4-py3-none-any.whl
+ipython @ file:///opt/concourse/worker/volumes/live/449dee2b-18f2-43ab-7642-175cc393858f/volume/ipython_1612212910853/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1610481889018/work
 itsdangerous==1.1.0
-Jinja2==2.11.3
-joblib==1.0.1
+jedi==0.17.0
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
+joblib @ file:///tmp/build/80754af9/joblib_1607970656719/work
+jsonschema @ file:///tmp/build/80754af9/jsonschema_1602607155483/work
+jupyter==1.0.0
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
+jupyter-console @ file:///tmp/build/80754af9/jupyter_console_1598884538475/work
+jupyter-core @ file:///opt/concourse/worker/volumes/live/c8df8dce-dbb3-46e7-649c-adf4ed2dd00a/volume/jupyter_core_1612213293829/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
 Keras==2.4.3
+Keras-Preprocessing==1.1.2
+kiwisolver @ file:///opt/concourse/worker/volumes/live/0b2f3e77-eaa3-4995-7dd0-c994762fcbde/volume/kiwisolver_1612282417472/work
+korean-lunar-calendar==0.2.1
+LunarCalendar==0.0.9
 lxml==4.6.2
 Markdown==3.3.4
-MarkupSafe==1.1.1
+MarkupSafe @ file:///opt/concourse/worker/volumes/live/cb778296-98db-45ad-411e-6f726e102dc3/volume/markupsafe_1594371638608/work
+matplotlib @ file:///opt/concourse/worker/volumes/live/f7797860-f8aa-410c-4a56-72315954816b/volume/matplotlib-base_1603378002957/work
+mistune @ file:///opt/concourse/worker/volumes/live/95802d64-d39c-491b-74ce-b9326880ca54/volume/mistune_1594373201816/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
 multitasking==0.0.9
-numpy==1.19.5
+nbclient @ file:///tmp/build/80754af9/nbclient_1602783176460/work
+nbconvert @ file:///opt/concourse/worker/volumes/live/2b9c1d93-d0fd-432f-7d93-66c93d81b614/volume/nbconvert_1601914875037/work
+nbformat @ file:///tmp/build/80754af9/nbformat_1610738111109/work
+nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1606153767164/work
+notebook @ file:///opt/concourse/worker/volumes/live/3dabb203-f14a-45e7-71a3-bc9a024a5a67/volume/notebook_1611341008226/work
+numpy @ file:///opt/concourse/worker/volumes/live/5572694e-967a-4c0c-52cf-b53d43e72de9/volume/numpy_and_numpy_base_1603491881791/work
 oauthlib==3.1.0
+olefile==0.46
 opt-einsum==3.3.0
-pandas==1.2.3
+packaging @ file:///tmp/build/80754af9/packaging_1611952188834/work
+pandas==1.2.1
+pandas-datareader==0.9.0
+pandocfilters @ file:///opt/concourse/worker/volumes/live/c330e404-216d-466b-5327-8ce8fe854d3a/volume/pandocfilters_1605120442288/work
+parso @ file:///tmp/build/80754af9/parso_1607623074025/work
+patsy==0.5.1
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow @ file:///opt/concourse/worker/volumes/live/705be880-f90c-4fb3-489d-9ee685c52cbe/volume/pillow_1609786792428/work
 plotly==4.14.3
+prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1606344362066/work
+prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
+protobuf==3.15.5
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+Pygments @ file:///tmp/build/80754af9/pygments_1610565767015/work
+PyMeeus==0.5.5
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+pyrsistent @ file:///opt/concourse/worker/volumes/live/ff11f3f0-615b-4508-471d-4d9f19fa6657/volume/pyrsistent_1600141727281/work
+pystan==2.19.1.1
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+PyYAML==5.4.1
+pyzmq==20.0.0
+qtconsole @ file:///tmp/build/80754af9/qtconsole_1612458529756/work
+QtPy==1.9.0
 requests==2.25.1
 requests-oauthlib==1.3.0
 retrying==1.3.3
 rsa==4.7.2
-scikit-learn==0.24.1
-scipy==1.6.1
-six==1.15.0
-tensorflow
-threadpoolctl==2.1.0
-urllib3==1.26.4
+scikit-learn @ file:///opt/concourse/worker/volumes/live/111833a2-339b-4578-413b-7337bb8fe64a/volume/scikit-learn_1598376920601/work
+scipy @ file:///opt/concourse/worker/volumes/live/7c142885-34bc-40e9-7fac-5aa9696f9b33/volume/scipy_1612469584314/work
+Send2Trash @ file:///tmp/build/80754af9/send2trash_1607525499227/work
+setuptools-git==1.2
+six @ file:///opt/concourse/worker/volumes/live/5b31cb27-1e37-4ca5-6e9f-86246eb206d2/volume/six_1605205320872/work
+soupsieve==2.2
+statsmodels==0.12.2
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.4.1
+tensorflow-estimator==2.4.0
+termcolor==1.1.0
+terminado==0.9.2
+testpath @ file:///home/ktietz/src/ci/testpath_1611930608132/work
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+tornado @ file:///opt/concourse/worker/volumes/live/05341796-4198-4ded-4a9a-332fde3cdfd1/volume/tornado_1606942323372/work
+tqdm==4.59.0
+traitlets @ file:///home/ktietz/src/ci/traitlets_1611929699868/work
+typing-extensions==3.7.4.3
+urllib3==1.26.3
+virtualenv==20.4.3
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
 Werkzeug==1.0.1
+widgetsnbextension==3.5.1
 wrapt==1.12.1
-yfinance
+yfinance==0.1.55
+zipp @ file:///tmp/build/80754af9/zipp_1604001098328/work
