@@ -59,7 +59,8 @@ def download_and_process_data(stock_name):
     df.set_axis(df['Date'], inplace=True)
     close_data = df['Close'].values
     close_data = close_data.reshape((-1,1))
-    return df, close_data
+    info = yfinance.Ticker(stock_name)
+    return df, close_data, info
 
 def split_data(close_data, df):
     split_percent = 80/100
@@ -202,14 +203,14 @@ model, test_generator, date_train, date_test, num_predictions
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 app = dash.Dash(
     external_stylesheets=external_stylesheets,
-    title="Stock Prediction using Machine Learning",
+    title="Predikter",
     update_title='Predicting ...')
 server = app.server
 # df,close_data =download_and_process_data('RELIANCE.NS')
 
 
 app.layout = html.Div([
-    html.H1('Stock Prediction using Machine Learning', style={"textAlign": "center", "margin_top":"8px"}),
+    html.H1('Predikter', style={"textAlign": "center", "margin_top":"8px"}),
     html.H2('Created By - Rishabh Panesar', style={"textAlign": "center", "margin_top":"8px"}),
     dcc.Tabs(id="tabs", children=[
         dcc.Tab(label="Some Basic Information", children=[
@@ -217,7 +218,7 @@ app.layout = html.Div([
                 html.P("This project is made just for educational purpose. All the predictions made by the Machine Learning Model are entirely probablistic based.", style={"textAlign": "center"}),
                 html.H2("How to use?", style={"textAlign":"center"}),
                 html.Ol(children=[
-                    html.Li("Web app only takes the TICKER name of the desired stock"),
+                    html.Li("Web app only takes the TICKER name of the desired asset"),
                     html.Li("Type the ticker name of the desired stock or index & hit enter"),
                     html.Li("First Plot is the plot obtained from testing the model again past data"),
                     html.Li("Second Plot is the plot that contains the future predictions made by the model")
@@ -250,6 +251,10 @@ app.layout = html.Div([
             html.Div([
                 dcc.Graph(id="training_plot")
             ]),
+            html.Div([
+                html.H1('Stock Info Section', style={'textAlign':'center'}),
+                html.Div(id='stock_info', style={"color":"#f5f5f5", "text-align":"justify", "text-justify":"inter-word", "padding":"32px", "marginLeft":"16px","marginRight":"16px"}),
+                ]),
             html.H1('Future Price Prediction', style={'textAlign':'center', "margin":"0px"}),
             html.Div([
                 dcc.Graph(id='future_plot')
@@ -289,14 +294,16 @@ def return_empty_graph():
     [dash.dependencies.Output('training_plot','figure'), 
     dash.dependencies.Output('future_plot','figure'),
     dash.dependencies.Output('r2_score', 'children')],
-    dash.dependencies.Input('stock_name','value'))
+    dash.dependencies.Output('stock_info', 'children'),
+    dash.dependencies.Input('stock_name','value'),
+    )
 def update_graph(value):
     try:
         stock = value
-        df, close_data = download_and_process_data(stock)
+        df, close_data, info = download_and_process_data(stock)
     except:
         empty = return_empty_graph()
-        return empty, empty, "No R2 Score to display"
+        return empty, empty, "No R2 Score to display", "No Asset Queried or Selected"
     try:
         close_train, close_test, date_train, date_test = split_data(close_data, df)
         train_generator, test_generator = sequence_to_supervised(15,close_train,close_test)
@@ -306,10 +313,10 @@ def update_graph(value):
         close_data, forecast, forecast_dates = predicting(close_data, lstm_model, 15, df)
         figure_2 = plot_future_prediction(lstm_model, test_generator, close_train, close_test, df, forecast_dates, forecast)
         r2_score = "R2 Score : {}".format(r2_score)
-        return figure_1, figure_2, r2_score
+        return figure_1, figure_2, r2_score, info.info['longBusinessSummary']
     except:
         empty = return_empty_graph()
-        return empty, empty, "No R2 Score to display"
+        return empty, empty, "No R2 Score to display", "No Asset Queried or Selected"
 # fig.show()
 
 if __name__=='__main__':
