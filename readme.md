@@ -11,5 +11,3 @@ How to use?
 6. run ```python3.8 app.py```
 7. Open the app using the link given in terminal.
 
-## Dependencies
-
